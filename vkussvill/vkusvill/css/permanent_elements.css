@@ -1,0 +1,224 @@
+body {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    background: #FFFFFF;
+    color: #324A52;
+    scroll-behavior: smooth;
+}
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.inner {
+    margin: 0 auto;
+    max-width: 1170px;
+}
+.main {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+.main__content {
+    min-width: 0;
+}
+/* Логотип */
+/* ------------------ */
+.logo {
+    display: flex;
+}
+.logo-image {
+    margin: 0 3px 0 0;
+    background: #84A6FF;
+    border-radius: 4px;
+    padding: 6px 6px;
+}
+.logo-text {
+    margin: 0 0 0 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.logo-title {
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.logo-subtitle {
+    font-weight: 300;
+    font-size: 12px;
+}
+/* ------------------ */
+/* Навигация */
+.nav {
+    flex: 0 1 448px;
+    font-size: 12px;
+}
+.nav-buger {
+    display: none;
+}
+.nav-items {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-items > li > a{
+    text-decoration: none;
+    color: #FFFFFF;
+    transition: all .2s ease-in;
+    letter-spacing: 0;
+}
+.nav-items > li > a:after {
+    transition: all 0.12s;
+}
+.nav-items > li > a:hover, .nav-items > li > a:active {
+    letter-spacing: 2px;
+}
+.nav-items > li > a:after, .nav-items > li > a:before {
+    backface-visibility: hidden;
+    border: 1px solid rgba(255, 255, 255, 0);
+    bottom: 0px;
+    content: " ";
+    display: block;
+    margin: 3px auto;
+    position: relative;
+    transition: all 190ms ease-in-out;
+    width: 0;
+}
+.nav-items > li > a:hover:after, .nav-items > li > a:hover:before {
+    backface-visibility: hidden;
+	border-color: #fff;
+	transition: width 200ms ease-in-out;
+	width: 100%;
+}
+.nav-items > li > a:hover:before {
+    bottom: auto;
+    top: 0;
+    width: 100%;
+}
+
+/* ------------------ */
+/* Телефон */
+.phone {
+    font-size: 13px;
+    line-height: 16px;
+}
+/* ------------------ */
+
+.title {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #324A52;
+}
+/* Карточки с товарами */
+
+.cart {
+    width: 260px;
+    height: 390px;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding-bottom: 0;
+    font-family: Inter, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    user-select: none; 
+}
+.cart__img {
+    margin-top: 25px;
+}
+.cart__text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-grow: 2;
+}
+.cart__text-title {
+    font-weight: bold;
+    font-size: 18px;
+}
+.cart__description {
+    font-size: 14px;
+}
+.cart__price {
+    align-self: start;
+    background: #ececec;
+    border-radius: 0px 4px 0px 10px;
+    padding: 3px 3px;
+    font-size: 13px; 
+    cursor: pointer;
+}
+.stock-cart {
+    width: 125px;
+    height: 180.86px;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background: #FFFFFF;
+    text-align: center;
+    user-select: none; 
+}
+
+.stock-cart img {
+    width: 80.09px;
+    height: 111.3px;
+    border-radius: 4px;
+    margin: 16px 0 0 0;
+}
+/* Кнопчки блин */
+.banner-nav__prev,
+.banner-nav__next,
+.swiper-pagination,
+.new-nav__next,
+.new-nav__prev {
+    position: relative;
+}
+.stock-nav__prev,
+.stock-nav__next {
+    position: relative;
+    align-self: center;
+}
+.stock-nav__prev {
+    margin: 0 60px 0 0;
+}
+.stock-nav__next {
+    margin: 0 0 0 60px;
+}
+.banner-nav__prev:after, .swiper-rtl .banner-nav__next:after {
+    content: url('../img/strelka.svg');
+}
+.banner-nav__next:after, .swiper-rtl .banner-nav__prev:after {
+    content: url('../img/strelka-levo.svg');
+}
+.new-nav__prev:after, .swiper-rtl .new-nav__next:after {
+    content: url('../img/strelka.svg');
+}
+.new-nav__next:after, .swiper-rtl .new-nav__prev:after {
+    content: url('../img/strelka-levo.svg');
+}
+.stock-nav__prev:after, .swiper-rtl .stock-nav__next:after {
+    content: url('../img/stok-strelka-pravo.svg');
+}
+.stock-nav__next:after, .swiper-rtl .stock-nav__prev:after {
+    content: url('../img/stock-strelka.svg');
+}
+.swiper-horizontal>.swiper-pagination-bullets, 
+.swiper-pagination-bullets.swiper-pagination-horizontal, 
+.swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 0px;
+    left: 0;
+    width: auto;
+}
+.new-nav__pagination, .swiper-pagination {
+    position: relative;
+}
+ .swiper-pagination-bullet {
+    bottom: 0;
+    border-radius: 0;
+    width: 49.68px;
+    height: 2px;
+    background-color: #5C8997;
+}
